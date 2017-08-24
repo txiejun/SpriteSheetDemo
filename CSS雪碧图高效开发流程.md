@@ -10,7 +10,9 @@
 ## 什么是雪碧图
 雪碧图是一种css图像合成技术，通过css的`background-image`（为元素设置背景图像）和`background-position`（设置背景图像的起始位置）属性显示需要显示的图片部分。
 假如我们把四个图标在Photoshop里面排列成下图所示并导出成一张合并的大图（icons.png).
+
 ![Photoshop图标排列](http://img.blog.csdn.net/20170818124138355?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHhpZWp1bg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
 那么通过css样式定位的时候的坐标系是:外层块元素的左上角为（0，0）点，向右是x轴正向，向下是y轴正向。由于`background-position` 的作用是设置背景图像的起始位置，默认起始坐标是（0，0），如果想要只显示图中从左边起第二个绿色的图标，那么我们需要把整个背景图片向左偏移60像素，并设置整个块元素的尺寸为绿色图标大小,关键样式如下：
 ```
 background-image: url("icons.png");
