@@ -146,7 +146,10 @@ height:50px;
 ### less-mixins自定义导出格式
 
  1. 进入到`TexturePacker`安装目录下的的exporters目录如：`D:\Program Files (x86)\CodeAndWeb\TexturePacker\bin\exporters`；
- 2. 拷贝`less`文件夹到同级目录并改名为`less-mixins`;![TexturePacker自定义格式](http://img.blog.csdn.net/20170823085951552?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHhpZWp1bg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+ 2. 拷贝`less`文件夹到同级目录并改名为`less-mixins`;
+ 
+ ![TexturePacker自定义格式](http://img.blog.csdn.net/20170823085951552?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHhpZWp1bg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+ 
  3. 进入到`less-mixins`目录，修改其中的`exporter.xml`为如下所示:
  
 
@@ -223,7 +226,9 @@ height:50px;
 ```
 5.关闭之前打开的`TexturePacker`界面，进入并双击`resource/icons.tps`文件，会自动打开`TexturePacker`界面；
 6.从左边的`Output`区域选择`Data Format`的下拉框会发现新增了我们刚才自定义的导出格式：`LESS-mixins (css)`；
+
 ![LESS-mixins（css)选项](http://img.blog.csdn.net/20170823094156038?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHhpZWp1bg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
 7.选中`LESS-mixins (css)`选项并点击工具栏的`Save`按钮，然后点击工具栏的`Publish`按钮重新发布；
 重新生成的自定义icons.less雪碧图配置文件如下：
 
@@ -249,6 +254,7 @@ height:50px;
 ### 雪碧图的使用
 
 **步骤一**
+
 在`src/style`目录新建样式文件`app-less.less`,具体内容如下：
 
 ```
@@ -348,10 +354,13 @@ height:50px;
 因为我们在样式里面使用的是小图标的less变量`.icons-pc_normal()`，所以后续增加或者删除部分图标而不会影响其他图标的使用。
 
 **步骤二**
+
 启动`koala`软件，把`src/style`目录拖入`koala`主界面，如下所示。点击`refresh`或者选中其中的less文件，点击`compile`就会生成对应的css文件。
+
 ![koala主界面](http://img.blog.csdn.net/20170823190442268?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHhpZWp1bg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
 **步骤三**
+
 在`src`目录下新建app.js文件，相关内容如下：
 
 ```
@@ -380,6 +389,7 @@ $(function () {
  - `app.js`主要做了一件事：当用户点击不同tab的时候进行选中切换；
 
 **步骤四**
+
 在项目根目录新建`index.html`,相关内容如下：
 
 ```
@@ -414,6 +424,7 @@ $(function () {
  - `index.html`构建了一个简单的网页，实现了一个tab列表的展示，我们在这儿通过`<link rel="stylesheet" href="./src/style/app-less.css">`引用了刚才*步骤二*通过`koala`生成的`app-less.css`文件。
 
 **启动项目**
+
 本项目需要安装Node.js和npm相关环境，在此默认认为你已经安装好相关环境。
  1. 进入`SpriteSheetDemo`项目根目录，执行命令`npm install http-server -g`；
  2. 执行命令`npm start`启动项目服务；
