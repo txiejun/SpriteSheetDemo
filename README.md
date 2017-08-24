@@ -4,7 +4,7 @@ SpriteSheetDemo
 
 如何使用
 ---
-本项目需要安装Node.js和npm相关环境，在此默认认为你已经安装好相关环境。
+本项目需要安装Node.js和npm相关环境，在此默认认为你已经安装好相关环境。(当然也可以使用其他web服务器来访问网站)
  1. 进入`SpriteSheetDemo`项目根目录，执行命令`npm install http-server -g`；
  2. 执行命令`npm start`启动项目服务；
  3. 在浏览器输入：`http://localhost/`，浏览内容；
