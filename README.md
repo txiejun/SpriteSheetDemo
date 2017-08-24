@@ -227,6 +227,7 @@
  
  ```
  5.关闭之前打开的`TexturePacker`界面，进入并双击`resource/icons.tps`文件，会自动打开`TexturePacker`界面；
+ 
  6.从左边的`Output`区域选择`Data Format`的下拉框会发现新增了我们刚才自定义的导出格式：`LESS-mixins (css)`；
  
  ![LESS-mixins（css)选项](docs/exporters2.png)
