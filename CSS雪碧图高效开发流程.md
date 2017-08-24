@@ -418,6 +418,7 @@ $(function () {
  1. 进入`SpriteSheetDemo`项目根目录，执行命令`npm install http-server -g`；
  2. 执行命令`npm start`启动项目服务；
  3. 在浏览器输入：`http://localhost/`，如果不出意外将会展示如下内容：
+ 
 ![示例项目运行效果](http://img.blog.csdn.net/20170823191651155?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHhpZWp1bg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
 **要点说明**
@@ -443,7 +444,9 @@ $(function () {
 ----------
 
 ## 方案三：gulp.spritesmith/webpack-spritesmith（待研究）
+
 [gulp.spritesmith](https://www.npmjs.com/package/gulp.spritesmith "gulp.spritesmith") 通过gulp自动化工具把图片集合转换成雪碧图和css、sass、less混合等配置；
+
 [webpack-spritesmith](https://www.npmjs.com/package/webpack-spritesmith "webpack-spritesmith") 把图片集合转换为雪碧图和css、sass、less混合等配置的webpack插件，主要灵感来源于`gulp.spritesmith`；
 
 具体的使用方法可以直接参考官方文档，在此就不进行详细叙述了（其实是还没深入研究）；
