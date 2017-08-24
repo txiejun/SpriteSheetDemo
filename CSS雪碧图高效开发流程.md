@@ -33,7 +33,9 @@ height:50px;
 
 如下图所示，我们把所有需要打包的图标拖入Photoshop编辑器，然后手动排版好。利用标尺和参考线获取每个图标的坐标和大小，也可以选中具体图标图层，使用快捷键ctrl+T弹出信息面板查看图层信息。最后再根据坐标信息编写对应的样式文件。
 合并的大图文件（icons.png)
+
 ![Photoshop合图](http://img.blog.csdn.net/20170818145241060?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHhpZWp1bg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
 对应的样式文件（icons.css)如下：
 
 ```
@@ -83,6 +85,7 @@ height:50px;
 ## 方案二：TexturePacker打包+less\sass\scss混合+koala（推荐）
 
 ###工具介绍
+
 [TexturePacker](https://www.codeandweb.com/texturepacker "TexturePacker") 是一个优秀的纹理打包工具，可以根据散图打包成大图并生成对应的小图标坐标尺寸等配置信息。现在被很多游戏开发团队广泛使用，用于构建丰富的逐帧动画角色和特效动画等。这个工具功能很全很强大，这儿简单介绍下它的几个特点：
 
  - 支持的框架和导出的格式丰富（支持css、less、sass及其他格式）；
@@ -93,16 +96,23 @@ height:50px;
 [Koala](http://koala-app.com/index-zh.html "koala") 是一个前端预处理器语言图形编译工具，支持Less、Sass、Compass、CoffeeScript，帮助web开发者更高效地使用它们进行开发。跨平台运行，完美兼容windows、linux、mac。
 
 ###TexturePacker雪碧图制作
+
 为了方便说明，我们新建一个简单的Html项目`SpriteSheetDemo`作为演示（以下说到的相对目录都是相对于项目`SpriteSheetDemo`的根目录而言） 其目录结构如下：
+
 ![SpriteSheetDemo项目结构图](http://img.blog.csdn.net/20170823201400920?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHhpZWp1bg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
 并默认认为你已经安装好了上面的两个工具：TexturePacker和koala。
 
 **步骤一**
+
 我们把所有需要打包成雪碧图的图标放在项目的`resource/icons`下面（实际项目建议根据不同功能模块归类图标到不同文件夹进行管理）
+
 ![icons图标](http://img.blog.csdn.net/20170822202353882?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHhpZWp1bg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
 **步骤二**
+
 打开TexturePacker，并拖入`resource/icons`的整个文件夹到TexturePacker中，如下图所示：
+
 ![TexturePacker界面图](http://img.blog.csdn.net/20170822204412376?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHhpZWp1bg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
  1. 从左边的`Output`区域选择`Data Format`为`LESS (css)`；
@@ -110,6 +120,7 @@ height:50px;
  3. 我们分别点击`Output`区域的`Data file` 和 `Texture file` 修改导出目录到`src/style/sprite-sheet`目录下。
  4. 再次点击工具栏`Save`按钮；
  5. 其他的配置项可以根据个人需求选择，然后点击工具栏的`Publish`发布雪碧图大图icons.png和对应配置文件icons.less;
+ 
 ![雪碧图导出结果](http://img.blog.csdn.net/20170822210633582?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHhpZWp1bg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
 这样我们就非常简单的获得了雪碧图的合图和less配置文件，下面看下导出的icons.less文件长什么样：
