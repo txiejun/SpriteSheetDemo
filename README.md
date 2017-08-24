@@ -13,7 +13,7 @@
  雪碧图是一种css图像合成技术，通过css的`background-image`（为元素设置背景图像）和`background-position`（设置背景图像的起始位置）属性显示需要显示的图片部分。
  假如我们把四个图标在Photoshop里面排列成下图所示并导出成一张合并的大图（icons.png).
  
- ![Photoshop图标排列](https://github.com/txiejun/SpriteSheetDemo/blob/master/docs/img_ps_1.png)
+ ![Photoshop图标排列](https://raw.githubusercontent.com/txiejun/SpriteSheetDemo/master/docs/img_ps_1.png)
  
  那么通过css样式定位的时候的坐标系是:外层块元素的左上角为（0，0）点，向右是x轴正向，向下是y轴正向。由于`background-position` 的作用是设置背景图像的起始位置，默认起始坐标是（0，0），如果想要只显示图中从左边起第二个绿色的图标，那么我们需要把整个背景图片向左偏移60像素，并设置整个块元素的尺寸为绿色图标大小,关键样式如下：
  ```
@@ -36,7 +36,7 @@
  如下图所示，我们把所有需要打包的图标拖入Photoshop编辑器，然后手动排版好。利用标尺和参考线获取每个图标的坐标和大小，也可以选中具体图标图层，使用快捷键ctrl+T弹出信息面板查看图层信息。最后再根据坐标信息编写对应的样式文件。
  合并的大图文件（icons.png)
  
- ![Photoshop合图](https://github.com/txiejun/SpriteSheetDemo/blob/master/docs/img_ps_2.png)
+ ![Photoshop合图](https://raw.githubusercontent.com/txiejun/SpriteSheetDemo/master/docs/img_ps_2.png)
  
  对应的样式文件（icons.css)如下：
  
@@ -101,7 +101,7 @@
  
  为了方便说明，我们新建一个简单的Html项目`SpriteSheetDemo`作为演示（以下说到的相对目录都是相对于项目`SpriteSheetDemo`的根目录而言） 其目录结构如下：
  
- ![SpriteSheetDemo项目结构图](https://github.com/txiejun/SpriteSheetDemo/blob/master/docs/project.png)
+ ![SpriteSheetDemo项目结构图](https://raw.githubusercontent.com/txiejun/SpriteSheetDemo/master/docs/project.png)
  
  并默认认为你已经安装好了上面的两个工具：TexturePacker和koala。
  
@@ -109,13 +109,13 @@
  
  我们把所有需要打包成雪碧图的图标放在项目的`resource/icons`下面（实际项目建议根据不同功能模块归类图标到不同文件夹进行管理）
  
- ![icons图标](https://github.com/txiejun/SpriteSheetDemo/blob/master/docs/icons.png)
+ ![icons图标](https://raw.githubusercontent.com/txiejun/SpriteSheetDemo/master/docs/icons.png)
  
  **步骤二**
  
  打开TexturePacker，并拖入`resource/icons`的整个文件夹到TexturePacker中，如下图所示：
  
- ![TexturePacker界面图](https://github.com/txiejun/SpriteSheetDemo/blob/master/docs/texturePacker.png)
+ ![TexturePacker界面图](https://raw.githubusercontent.com/txiejun/SpriteSheetDemo/master/docs/texturePacker.png)
  
   1. 从左边的`Output`区域选择`Data Format`为`LESS (css)`；
   2. 点击工具栏的`Save`按钮，会弹出对话框让你选择保存导出配置的位置，我们保存在`resource/icons.tps`下面。工具会默认设置导出的大图和less文件到同级目录（`resource/icons.png`和`resource/icons.less`）；
@@ -123,7 +123,7 @@
   4. 再次点击工具栏`Save`按钮；
   5. 其他的配置项可以根据个人需求选择，然后点击工具栏的`Publish`发布雪碧图大图icons.png和对应配置文件icons.less;
   
- ![雪碧图导出结果](https://github.com/txiejun/SpriteSheetDemo/blob/master/docs/output.png)
+ ![雪碧图导出结果](https://raw.githubusercontent.com/txiejun/SpriteSheetDemo/master/docs/output.png)
  
  这样我们就非常简单的获得了雪碧图的合图和less配置文件，下面看下导出的icons.less文件长什么样：
  
@@ -150,7 +150,7 @@
   1. 进入到`TexturePacker`安装目录下的的exporters目录如：`D:\Program Files (x86)\CodeAndWeb\TexturePacker\bin\exporters`；
   2. 拷贝`less`文件夹到同级目录并改名为`less-mixins`;
   
-  ![TexturePacker自定义格式](https://github.com/txiejun/SpriteSheetDemo/blob/master/docs/exporters1.png)
+  ![TexturePacker自定义格式](https://raw.githubusercontent.com/txiejun/SpriteSheetDemo/master/docs/exporters1.png)
   
   3. 进入到`less-mixins`目录，修改其中的`exporter.xml`为如下所示:
   
@@ -230,7 +230,7 @@
  
  6.从左边的`Output`区域选择`Data Format`的下拉框会发现新增了我们刚才自定义的导出格式：`LESS-mixins (css)`；
  
- ![LESS-mixins（css)选项](https://github.com/txiejun/SpriteSheetDemo/blob/master/docs/exporters2.png)
+ ![LESS-mixins（css)选项](https://raw.githubusercontent.com/txiejun/SpriteSheetDemo/master/docs/exporters2.png)
  
  7.选中`LESS-mixins (css)`选项并点击工具栏的`Save`按钮，然后点击工具栏的`Publish`按钮重新发布；
  重新生成的自定义icons.less雪碧图配置文件如下：
@@ -360,7 +360,7 @@
  
  启动`koala`软件，把`src/style`目录拖入`koala`主界面，如下所示。点击`refresh`或者选中其中的less文件，点击`compile`就会生成对应的css文件。
  
- ![koala主界面](https://github.com/txiejun/SpriteSheetDemo/blob/master/docs/koala.png)
+ ![koala主界面](https://raw.githubusercontent.com/txiejun/SpriteSheetDemo/master/docs/koala.png)
  
  **步骤三**
  
@@ -433,7 +433,7 @@
   2. 执行命令`npm start`启动项目服务；
   3. 在浏览器输入：`http://localhost/`，如果不出意外将会展示如下内容：
   
- ![示例项目运行效果](https://github.com/txiejun/SpriteSheetDemo/blob/master/docs/index.png)
+ ![示例项目运行效果](https://raw.githubusercontent.com/txiejun/SpriteSheetDemo/master/docs/index.png)
  
  **要点说明**
  
