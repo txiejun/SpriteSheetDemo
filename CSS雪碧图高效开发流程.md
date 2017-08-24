@@ -84,7 +84,7 @@ height:50px;
 
 ## 方案二：TexturePacker打包+less\sass\scss混合+koala（推荐）
 
-###工具介绍
+### 工具介绍
 
 [TexturePacker](https://www.codeandweb.com/texturepacker "TexturePacker") 是一个优秀的纹理打包工具，可以根据散图打包成大图并生成对应的小图标坐标尺寸等配置信息。现在被很多游戏开发团队广泛使用，用于构建丰富的逐帧动画角色和特效动画等。这个工具功能很全很强大，这儿简单介绍下它的几个特点：
 
@@ -95,7 +95,7 @@ height:50px;
 
 [Koala](http://koala-app.com/index-zh.html "koala") 是一个前端预处理器语言图形编译工具，支持Less、Sass、Compass、CoffeeScript，帮助web开发者更高效地使用它们进行开发。跨平台运行，完美兼容windows、linux、mac。
 
-###TexturePacker雪碧图制作
+### TexturePacker雪碧图制作
 
 为了方便说明，我们新建一个简单的Html项目`SpriteSheetDemo`作为演示（以下说到的相对目录都是相对于项目`SpriteSheetDemo`的根目录而言） 其目录结构如下：
 
@@ -143,7 +143,7 @@ height:50px;
 ```
 按理说到此为止我们就可以使用以上icons.less在项目中进行开发了。但是我发现目前生成的并不是less混合文件，特别是同一个图标（如ipad）的不同状态（normal,hover,selected)切换不是很好处理。这儿我们便利用到TexturePacker的自定义导出格式，我们自定义一个less-mixins的导出格式，以满足我们的要求。自定义导出格式的详细操作说明可以[参考文档](https://www.codeandweb.com/texturepacker/documentation#customization "自定义导出格式")；
 
-###less-mixins自定义导出格式
+### less-mixins自定义导出格式
 
  1. 进入到`TexturePacker`安装目录下的的exporters目录如：`D:\Program Files (x86)\CodeAndWeb\TexturePacker\bin\exporters`；
  2. 拷贝`less`文件夹到同级目录并改名为`less-mixins`;![TexturePacker自定义格式](http://img.blog.csdn.net/20170823085951552?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdHhpZWp1bg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
