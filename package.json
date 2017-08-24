@@ -1,0 +1,17 @@
+{
+  "name": "SpriteSheetDemo",
+  "version": "0.0.1",
+  "description": "TexturePacker打包雪碧图演示项目",
+  "main": "index.js",
+  "scripts": {
+    "start":"http-server -p 80"
+  },
+  "author": "txiejun",
+  "license": "ISC",
+  "devDependencies": {
+
+  },
+  "dependencies": {
+
+  }
+}

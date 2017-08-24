@@ -1,0 +1,80 @@
+/**
+* Author: txiejun
+* Contact:txiejun@126.com
+* Time: 2017/8/17 19:27
+*/
+//app 样式定义
+
+@import "sprite-sheet/icons.less";
+
+.d-app{
+  height:500px;
+
+  .tab-list{
+    margin:10px 50px;
+
+    .tab-item{
+      display: inline-block;
+      vertical-align: middle;
+      text-align: left;
+      font-size: 14px;
+      margin-right:20px;
+      padding:4px;
+      border-radius:6px;
+      border:1px solid #B6C2F6;
+
+      .item-icon{
+        float: left;
+      }
+
+      p{
+        float: left;
+        color: #333;
+        line-height: 32px;
+        height:32px;
+        margin:0 5px;
+      }
+
+      //普通状态
+      .icon-pc{
+        .d-icons();
+        .icons-pc_normal();
+      }
+
+      .icon-ipad{
+        .d-icons();
+        .icons-ipad_normal();
+      }
+
+      //hover状态
+      &:hover{
+        p{
+          color: #dd2222;
+        }
+
+        .icon-pc{
+          .icons-pc_hover();
+        }
+
+        .icon-ipad{
+          .icons-ipad_hover();
+        }
+      }
+
+      //选中状态
+      &.selected{
+        p{
+          color: #39cc11;
+        }
+
+        .icon-pc{
+          .icons-pc_selected();
+        }
+
+        .icon-ipad{
+          .icons-ipad_selected();
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+/**
+* Author: txiejun
+* Contact:txiejun@126.com
+* Time: 2017/8/17 19:27
+*/
+.d-app {
+  height: 500px;
+}
+.d-app .tab-list {
+  margin: 10px 50px;
+}
+.d-app .tab-list .tab-item {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  font-size: 14px;
+  margin-right: 20px;
+  padding: 4px;
+  border-radius: 6px;
+  border: 1px solid #B6C2F6;
+}
+.d-app .tab-list .tab-item .item-icon {
+  float: left;
+}
+.d-app .tab-list .tab-item p {
+  float: left;
+  color: #333;
+  line-height: 32px;
+  height: 32px;
+  margin: 0 5px;
+}
+.d-app .tab-list .tab-item .icon-pc {
+  display: inline-block;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-image: url('sprite-sheet/icons.png');
+  width: 32px;
+  height: 30px;
+  background-position: -2px -34px;
+}
+.d-app .tab-list .tab-item .icon-ipad {
+  display: inline-block;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-image: url('sprite-sheet/icons.png');
+  width: 26px;
+  height: 32px;
+  background-position: -36px -36px;
+}
+.d-app .tab-list .tab-item:hover p {
+  color: #dd2222;
+}
+.d-app .tab-list .tab-item:hover .icon-pc {
+  width: 32px;
+  height: 30px;
+  background-position: -2px -66px;
+}
+.d-app .tab-list .tab-item:hover .icon-ipad {
+  width: 26px;
+  height: 32px;
+  background-position: -36px -70px;
+}
+.d-app .tab-list .tab-item.selected p {
+  color: #39cc11;
+}
+.d-app .tab-list .tab-item.selected .icon-pc {
+  width: 32px;
+  height: 30px;
+  background-position: -2px -2px;
+}
+.d-app .tab-list .tab-item.selected .icon-ipad {
+  width: 26px;
+  height: 32px;
+  background-position: -36px -2px;
+}
